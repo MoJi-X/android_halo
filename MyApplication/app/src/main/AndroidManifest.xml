@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/halo_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/bg_oval_black_translucent_50"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+
+        android:theme="@style/Theme.MyApplication">
+        <activity
+            android:name=".view.LoginActivity"
+            android:theme = "@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".view.APIActivity"
+            android:theme = "@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ui.me.MeActivity"
+            android:theme="@style/WordPress.NoActionBar"/>
+        <activity android:name=".ui.eassy.EassyActivity"
+            android:label="文章"/>
+        <activity android:name=".ui.media.MediaActivity"
+            android:label="附件"/>
+        <activity android:name=".ui.page.PageActivity"
+            android:label="页面"/>
+        <activity android:name=".ui.stats.StatsActivity"
+            android:label="统计"/>
+        <activity android:name=".view.WebViewActivty"
+            android:theme = "@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".view.WriteViewActivity"
+            android:theme = "@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".ui.me.MeSetting"
+            android:theme = "@style/Theme.AppCompat.NoActionBar"/>
+    </application>
+
+</manifest>

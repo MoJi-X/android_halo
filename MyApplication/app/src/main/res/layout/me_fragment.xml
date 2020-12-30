@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScrollTargetViewId="@+id/scroll_view">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/WordPress.ActionBar" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_avatar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/content_margin"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="@dimen/content_margin"
+                android:layout_marginBottom="12dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="24dp">
+
+                    <FrameLayout
+                        android:id="@+id/frame_avatar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <FrameLayout
+                            android:id="@+id/avatar_container"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="我的个人资料"
+                            android:padding="4dp">
+
+                            <ImageView
+                                android:id="@+id/me_avatar"
+                                android:layout_width="60dp"
+                                android:layout_height="60dp"
+                                android:contentDescription="我的照片"
+                                app:srcCompat="@drawable/halo_icon" />
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:id="@+id/change_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/frame_avatar"
+                        android:layout_centerHorizontal="true"
+                        android:background="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:padding="8dp"
+                        android:textAllCaps="true"
+                        android:textAppearance="?attr/textAppearanceCaption"
+                        android:textColor="?attr/colorPrimary"
+                        tools:ignore="SmallSp"
+                        tools:text="HALO" />
+
+                    <TextView
+                        android:id="@+id/me_display_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/change_photo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Version"
+                        android:textAppearance="?attr/textAppearanceSubtitle1" />
+
+                    <TextView
+                        android:id="@+id/me_username"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/me_display_name"
+                        android:layout_centerHorizontal="true"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="0.1"
+                        android:textAppearance="?attr/textAppearanceBody2" />
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/row_my_profile"
+                style="@style/MeListRowLayout">
+
+                <ImageView
+                    android:id="@+id/stats_icon"
+                    style="@style/MeListRowIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_user_white_24dp" />
+
+                <TextView
+                    android:id="@+id/textView_stats"
+                    style="@style/MeListRowTextView"
+                    android:text="我的个人资料" />
+
+            </LinearLayout>
+
+            <View style="@style/MeListSectionDividerView" />
+
+            <LinearLayout
+                android:id="@+id/row_account_settings"
+                style="@style/MeListRowLayout">
+
+                <ImageView
+                    android:id="@+id/page_icon"
+                    style="@style/MeListRowIcon"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_cog_white_24dp" />
+
+                <TextView
+                    android:id="@+id/textView_page"
+                    style="@style/MeListRowTextView"
+                    android:text="账户设置" />
+
+            </LinearLayout>
+
+            <View style="@style/MeListSectionDividerView" />
+
+            <LinearLayout
+                android:id="@+id/row_app_settings"
+                style="@style/MeListRowLayout">
+
+                <ImageView
+                    android:id="@+id/essay_icon"
+                    style="@style/MeListRowIcon"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_phone_white_24dp" />
+
+                <TextView
+                    android:id="@+id/textView_eassy"
+                    style="@style/MeListRowTextView"
+                    android:text="应用程序设置" />
+
+            </LinearLayout>
+
+            <View style="@style/MeListSectionDividerView" />
+
+            <LinearLayout
+                android:id="@+id/row_support"
+                style="@style/MeListRowLayout">
+
+                <ImageView
+                    android:id="@+id/Media_icon"
+                    style="@style/MeListRowIcon"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_help_white_24dp" />
+
+                <TextView
+                    android:id="@+id/textView_media"
+                    style="@style/MeListRowTextView"
+                    android:text="帮助支持" />
+
+            </LinearLayout>
+
+            <View style="@style/MeListSectionDividerView" />
+
+            <LinearLayout
+                android:id="@+id/row_logout"
+                style="@style/MeListRowLayout">
+
+                <ImageView
+                    android:id="@+id/setting_icon"
+                    style="@style/MeListRowIcon"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_sign_out_white_24dp" />
+
+                <TextView
+                    android:id="@+id/textView_setting"
+                    style="@style/MeListRowTextView"
+                    android:text="登出" />
+
+            </LinearLayout>
+
+            <View style="@style/MeListSectionDividerView" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.DashboardFragment">
+
+    <LinearLayout
+        android:id="@+id/linear_all"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/linear_icon"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:orientation="horizontal">
+
+
+            <ImageButton
+                android:id="@+id/imageButton_stats"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_stats_alt_white_24dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton_page"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_pages_blue_48dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton_media"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_media_white_24dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton_essay"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/ic_posts_white_24dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            style="@style/MeListRowLayout">
+
+            <ImageView
+                android:id="@+id/stats_icon"
+                style="@style/MeListRowIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_stats_alt_white_24dp" />
+
+            <TextView
+                android:id="@+id/textView_stats"
+                style="@style/MeListRowTextView"
+                android:text="统计" />
+
+        </LinearLayout>
+
+        <View style="@style/MeListSectionDividerView" />
+
+        <LinearLayout
+            style="@style/MeListRowLayout">
+
+            <ImageView
+                android:id="@+id/page_icon"
+                style="@style/MeListRowIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_pages_blue_48dp" />
+
+            <TextView
+                android:id="@+id/textView_page"
+                style="@style/MeListRowTextView"
+                android:layout_height="match_parent"
+                android:text="页面" />
+
+        </LinearLayout>
+
+        <View style="@style/MeListSectionDividerView" />
+
+        <LinearLayout
+            style="@style/MeListRowLayout">
+
+            <ImageView
+                android:id="@+id/essay_icon"
+                style="@style/MeListRowIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_posts_white_24dp" />
+
+            <TextView
+                android:id="@+id/textView_eassy"
+                style="@style/MeListRowTextView"
+                android:text="文章" />
+
+        </LinearLayout>
+
+        <View style="@style/MeListSectionDividerView" />
+
+        <LinearLayout
+            style="@style/MeListRowLayout">
+
+            <ImageView
+                android:id="@+id/Media_icon"
+                style="@style/MeListRowIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_media_white_24dp" />
+
+            <TextView
+                android:id="@+id/textView_media"
+                style="@style/MeListRowTextView"
+                android:text="附件" />
+
+        </LinearLayout>
+
+        <View style="@style/MeListSectionDividerView" />
+
+        <LinearLayout
+            style="@style/MeListRowLayout">
+
+            <ImageView
+                android:id="@+id/setting_icon"
+                style="@style/MeListRowIcon"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_cog_white_24dp" />
+
+            <TextView
+                android:id="@+id/textView_setting"
+                style="@style/MeListRowTextView"
+                android:text="设置" />
+
+        </LinearLayout>
+
+        <View style="@style/MeListSectionDividerView" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
